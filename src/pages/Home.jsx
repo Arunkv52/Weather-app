@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="page-container flex justify-start items-start gap-0"
+        className="page-container md:flex md:justify-start items-start gap-0"
         style={{
           backgroundImage: `url(${BgWeather})`,
           width: "100%",
@@ -42,13 +42,13 @@ const Home = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="w-1/2 text-wite">
+        <div className="md:w-1/2 w-full text-wite">
           <div className="left-all flex justify-start items-center gap-2 absolute bottom-8 left-10">
             <div>
-              <h1 className="text-white text-7xl">{ data ? data.current.temp_f : 27} </h1>
+              <h1 className="text-white md:text-7xl text-4xl">{ data ? data.current.temp_f : 27} </h1>
             </div>
             <div className="text-white">
-              <h2 className="text-6xl">{data ? data.location.name : 'Coimbatore'}</h2>
+              <h2 className="md:text-6xl text-3xl">{data ? data.location.name : 'Coimbatore'}</h2>
               <p>{data ? data.location.localtime : date}</p>
             </div>
             <div>
@@ -56,7 +56,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="md:w-1/2 w-full">
           <div className="right-all h-dvh bg-black/80 py-20 px-10">
             <label htmlFor="search"></label>
             <input
